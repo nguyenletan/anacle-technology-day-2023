@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        maintext: '#4F3A7E',
-        mainbg: '#3DDDF2',
+        'action-color': '#ffffff',
+        'action-color-hover': '#ffffff',
       }
     },
   },

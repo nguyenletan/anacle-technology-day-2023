@@ -21,6 +21,9 @@ const {
 
     <!-- favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <SiteMeta
       title={title}
@@ -32,12 +35,12 @@ const {
       author={author}
     />
   </head>
-  <body>
+  <body class="mainBackground">
     <Header />
-    <main id="main-content">
+    <main id="main-content" class="relative">
       <slot />
     </main>
-    <Footer />
+    <!--<Footer /> -->
     <style lang="scss" is:global>
       // theme settings
       :root {
@@ -45,8 +48,8 @@ const {
         --radius-large: 6px;
         --gap-default: 2rem;
         --font-measure: 70ch;
-        --font-family-default: 'Open Sans', sans-serif;
-        --font-family-special: 'Open Sans', sans-serif;
+        --font-family-default: 'Montserrat', sans-serif;
+        --font-family-special: 'Montserrat', sans-serif;
         // light theme
         --font-color: var(--neutral-900);
         --action-color: var(--primary-300);
@@ -103,6 +106,13 @@ const {
             stroke: white;
           }
         }
+      }
+
+      .mainBackground {
+          background-image: url('/bg-12.webp');
+          background-size: cover;
+          background-position: right center;
+          background-repeat: no-repeat;
       }
     </style>
   </body>
