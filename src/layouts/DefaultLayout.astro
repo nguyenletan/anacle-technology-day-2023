@@ -109,10 +109,19 @@ const {
       }
 
       .mainBackground {
-          background-image: url('/general-bg.webp');
+          background-image: url('/general-bg-mobile.webp');
           background-size: cover;
-          background-position: right center;
+          background-position: left top;
           background-repeat: no-repeat;
+      }
+
+      @media only screen and (min-width: 480px) {
+          .mainBackground {
+              background-image: url('/general-bg.webp');
+              background-size: cover;
+              background-position: right center;
+              background-repeat: no-repeat;
+          }
       }
     </style>
   </body>
