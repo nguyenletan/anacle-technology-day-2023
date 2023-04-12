@@ -40,8 +40,8 @@ const {
       author={author}
     />
   </head>
-  <body class="mainBackground">
-    <Header />
+  <body class="agendaBackground">
+
     <main id="main-content">
       <slot />
     </main>
@@ -113,18 +113,18 @@ const {
         }
       }
 
-      .mainBackground {
-          background-image: url("/general-bg-mobile.webp");
-          background-size: cover;
+      .agendaBackground {
+          background-image: url("/agenda-bg.webp");
+          background-size: contain;
           background-position: left top;
           background-repeat: no-repeat;
       }
 
       @media only screen and (min-width: 480px) {
-          .mainBackground {
-              background-image: url("/general-bg.webp");
+          .agendaBackground {
+              background-image: url("/agenda-bg.webp");
               background-size: cover;
-              background-position: right center;
+              background-position: right top;
               background-repeat: no-repeat;
           }
       }

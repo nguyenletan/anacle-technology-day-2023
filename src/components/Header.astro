@@ -1,19 +1,25 @@
 ---
-import Navigation from '../components/Navigation.astro'
-import { SkipLinks } from 'accessible-astro-components'
-import { Icon } from 'astro-icon'
+import Navigation from "../components/Navigation.astro";
+import { SkipLinks } from "accessible-astro-components";
+import { Icon } from "astro-icon";
 ---
 
-<header >
+<header>
   <SkipLinks />
   <Navigation>
-    <!--<li class="menu-item">
-      <a href="/">Home</a>
+    <li class="menu-item">
+      <a href="/agenda/">AGENDA</a>
     </li>
     <li class="menu-item">
-      <a href="/blog/">Blog</a>
+      <a href="/exhibition/">EXHIBITION</a>
     </li>
-    <li class="menu-item has-dropdown">
+    <li class="menu-item">
+      <a href="/live_stream/">LIVE STREAM</a>
+    </li>
+    <li class="menu-item">
+      <a href="/contact/">CONTACT US</a>
+    </li>
+    <!--<li class="menu-item has-dropdown">
       <button aria-haspopup="true" aria-expanded="false">Example Pages</button>
       <ul class="dropdown-menu">
         <li class="submenu-item">
@@ -26,12 +32,19 @@ import { Icon } from 'astro-icon'
           <a href="/accessible-components">Accessible Components</a>
         </li>
       </ul>
-    </li>
-    <li class="menu-item">
-      <a href="https://accessible-astro.dev" title="external link" rel="external noopener noreferrer">External Link</a>
+    </li>-->
+    <!--<li class="menu-item">
+      <a
+        href="https://accessible-astro.dev"
+        title="external link"
+        rel="external noopener noreferrer">External Link</a
+      >
     </li>
     <li class="menu-item type-icon">
-      <a href="https://github.com/markteekman/accessible-astro-starter" title="Go to the GitHub page">
+      <a
+        href="https://github.com/markteekman/accessible-astro-starter"
+        title="Go to the GitHub page"
+      >
         <Icon pack="ion" name="logo-github" />
       </a>
     </li>-->
@@ -39,7 +52,7 @@ import { Icon } from 'astro-icon'
 </header>
 
 <style lang="scss" is:global>
-  @use '../assets/scss/base/outline' as *;
+  @use "../assets/scss/base/outline" as *;
 
   header {
     .type-icon a {
