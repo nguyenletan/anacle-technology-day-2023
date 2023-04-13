@@ -4,14 +4,31 @@ const { src = "/general-bg.webp" } = Astro.props;
 ---
 
 <DefaultLayout title="Home">
-  <div class="flex h-full w-full">
-    <section class="relative">
-      <!--<div class="container">
-        <div class="flex w-full flex-col flex-wrap items-center justify-center text-white">
+    <section class="bottom-0 flex h-full w-full items-end justify-center">
+        <div class="container">
+            <div
+                    class="flex w-full flex-col flex-wrap items-center justify-center text-white"
+            >
+                <a class target="_blank" href="https://form.jotform.com/230920323318851"
+                ><button
+                        type="button"
+                        class="rounded-md px-3.5 py-2.5 text-lg font-bold text-white shadow-sm hover:bg-green-900"
+                >
+                    REGISTER
+                </button></a
+                >
+                <div class="invisible">
+                    <p class="pb-3 pt-5 text-xl">
+                        Marina Bay Sands Expo & Convention Centre
+                    </p>
+                    <p class="text-2xl font-bold">R.S.V.P</p>
+                    <a class="pb-0 !text-white" href="https://www.ptd2023.com"
+                    >ptd2023.com</a
+                    >
+                </div>
+            </div>
         </div>
-      </div>-->
     </section>
-  </div>
 </DefaultLayout>
 
 <style lang="scss">
