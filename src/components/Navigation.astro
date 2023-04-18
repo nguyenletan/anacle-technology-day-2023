@@ -9,7 +9,7 @@ import { DarkMode } from 'accessible-astro-components'
       <img src={(await import('../assets/img/logo.webp')).default} alt="Anacle Logo" width="88" height="88" />
       <!--span class="font-bold text-xl">Anacle Technology Day</span>-->
     </a>
-    <div class="wrapper mx-auto">
+    <div class="wrapper mr-16">
       <nav class="desktop-menu" aria-label="Main navigation desktop">
         <ul class="menu">
           <slot />
@@ -262,7 +262,7 @@ import { DarkMode } from 'accessible-astro-components'
     nav {
       > ul {
         display: flex;
-        gap: 1.5rem;
+        gap: 4rem;
         list-style-type: none;
 
         a,
@@ -280,7 +280,7 @@ import { DarkMode } from 'accessible-astro-components'
         .has-dropdown > button:focus {
           text-decoration: underline;
           text-decoration-thickness: 1px;
-          text-decoration-style: wavy;
+          text-decoration-style: solid;
           text-underline-offset: 7px;
         }
 
