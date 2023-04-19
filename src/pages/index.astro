@@ -7,7 +7,7 @@ const { mobileTitleImage = "/mobile-title.webp" } = Astro.props;
 
 <DefaultLayout title="Home">
   <section
-    class="relative bottom-0 flex h-full w-full items-center justify-center md:items-end"
+    class="relative bottom-0 flex  w-full items-center justify-center md:items-end"
   >
     <div class="container hidden lg:flex">
       <div
@@ -33,7 +33,7 @@ const { mobileTitleImage = "/mobile-title.webp" } = Astro.props;
       </div>
     </div>
     <div class="container block !p-0 lg:hidden">
-      <div class="block h-[90vh] flex-wrap">
+      <div class="block h-[82vh] flex-wrap">
         <img
           class="mt-[0px] object-cover"
           src={mobileTitleImage}
@@ -54,7 +54,7 @@ const { mobileTitleImage = "/mobile-title.webp" } = Astro.props;
           alt="General Background"
         />
       </div>
-      <div class="white-box flex text-black absolute bottom-0 w-full">
+      <div class="white-box absolute bottom-0 flex w-full text-black">
         <h2 class="w-full text-center text-2xl uppercase">
           <span class="font-light">Redefining</span> proptech
         </h2>
@@ -62,8 +62,63 @@ const { mobileTitleImage = "/mobile-title.webp" } = Astro.props;
     </div>
   </section>
   <section
-    class="second-background relative bottom-0 flex h-full w-full items-center justify-center md:items-end"
+    class="second-background flex flex-col flex-wrap items-center justify-center relative bottom-0 block min-h-[100vh] w-full text-center"
   >
+    <ul class="flex flex-col gap-8 flex-wrap items-center justify-around">
+      <li>
+        <h3 class="text-lg font-light uppercase mb-3">
+          turing <br />
+          X <br />
+          <span class="font-bold">No-Code Computing</span>
+        </h3>
+        <ul>
+          <li>Code Designer • • • Blockly</li>
+          <li>Database Designer</li>
+          <li>Workflow Designer • • • React Flow</li>
+          <li>UI Designer • • • Chakra UI</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3 class="text-lg font-light uppercase mb-3">
+          minsky <br />
+          X <br />
+          <span class="font-bold">Artificial Intelligence</span>
+        </h3>
+        <ul>
+          <li>
+            Insights® by Simplicity <br/> Early Fault Prediction • • • <br /> Chiller, Pump,
+            Elevator
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h3 class="text-lg font-light uppercase mb-3">
+          ashton <br />
+          X <br />
+          <span class="font-bold">Internet of things</span>
+        </h3>
+        <ul>
+          <li>
+            Smart Office • • • IAQ, Temp / Humidity, <br /> Energy / Water
+          </li>
+          <li>BLE Real-time Locating</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3 class="text-lg font-light uppercase mb-3">
+          Mcdowell <br />
+          X <br />
+          <span class="font-bold">Immersive UX</span>
+        </h3>
+        <ul>
+          <li>Immersive Surveillance</li>
+          <li>Augmented Reality Guided Maintenance</li>
+        </ul>
+      </li>
+    </ul>
   </section>
 </DefaultLayout>
 
@@ -81,5 +136,6 @@ const { mobileTitleImage = "/mobile-title.webp" } = Astro.props;
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
+    color: var(--primary-200);
   }
 </style>
