@@ -1,36 +1,85 @@
 ---
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 const { src = "/general-bg.webp" } = Astro.props;
+const { manImage = "/man.webp" } = Astro.props;
+const { mobileTitleImage = "/mobile-title.webp" } = Astro.props;
 ---
 
 <DefaultLayout title="Home">
-    <section class="bottom-0 flex h-full w-full items-center md:items-end justify-center">
-        <div class="container">
-            <div
-                    class="flex w-full flex-col flex-wrap items-center justify-center text-white"
-            >
-                <a class target="_blank" href="https://form.jotform.com/230920323318851"
-                ><button
-                        type="button"
-                        class="rounded-md px-3.5 py-2.5 text-sm md:text-lg font-bold text-white shadow-sm hover:bg-green-900"
-                >
-                    REGISTER
-                </button></a
-                >
-                <div class="invisible">
-                    <p class="pb-3 pt-5 text-xl">
-                        Marina Bay Sands Expo & Convention Centre
-                    </p>
-                    <p class="text-2xl font-bold">R.S.V.P</p>
-                    <a class="pb-0 !text-white" href="https://www.ptd2023.com"
-                    >ptd2023.com</a
-                    >
-                </div>
-            </div>
+  <section
+    class="relative bottom-0 flex h-full w-full items-center justify-center md:items-end"
+  >
+    <div class="container hidden lg:flex">
+      <div
+        class="flex w-full flex-col flex-wrap items-center justify-center text-white"
+      >
+        <a class target="_blank" href="https://form.jotform.com/230920323318851"
+          ><button
+            type="button"
+            class="rounded-md px-3.5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-green-900 md:text-lg"
+          >
+            REGISTER
+          </button></a
+        >
+        <div class="invisible">
+          <p class="pb-3 pt-5 text-xl">
+            Marina Bay Sands Expo & Convention Centre
+          </p>
+          <p class="text-2xl font-bold">R.S.V.P</p>
+          <a class="pb-0 !text-white" href="https://www.ptd2023.com"
+            >ptd2023.com</a
+          >
         </div>
-    </section>
+      </div>
+    </div>
+    <div class="container block !p-0 lg:hidden">
+      <div class="block h-[90vh] flex-wrap">
+        <img
+          class="mt-[0px] object-cover"
+          src={mobileTitleImage}
+          alt="General Background"
+        />
+        <div class="background-text mb-8 w-full text-center text-lg">
+          12th - 13th July 2023 | 2PM - 5PM
+        </div>
+        <div
+          class="background-text flex w-full flex-col flex-wrap items-center justify-center text-center text-lg"
+        >
+          MARINA BAY SANDS <br />
+          EXPO & CONVENTION CENTRE
+        </div>
+        <img
+          class="absolute bottom-0 h-[500px] object-cover"
+          src={manImage}
+          alt="General Background"
+        />
+      </div>
+      <div class="white-box flex text-black absolute bottom-0 w-full">
+        <h2 class="w-full text-center text-2xl uppercase">
+          <span class="font-light">Redefining</span> proptech
+        </h2>
+      </div>
+    </div>
+  </section>
+  <section
+    class="second-background relative bottom-0 flex h-full w-full items-center justify-center md:items-end"
+  >
+  </section>
 </DefaultLayout>
 
 <style lang="scss">
+  .background-text {
+    color: var(--primary-200);
+  }
 
+  .white-box {
+    background-color: var(--primary-200);
+  }
+
+  .second-background {
+    background-image: url("/mobile-bg-2.webp");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
 </style>
