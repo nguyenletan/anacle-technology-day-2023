@@ -14,7 +14,7 @@ import { DarkMode } from "accessible-astro-components";
       />
       <!--span class="font-bold text-xl">Anacle Technology Day</span>-->
     </a>
-    <div class="wrapper mr-24">
+    <div class="wrapper lg:mr-24">
       <nav class="desktop-menu" aria-label="Main navigation desktop">
         <ul class="menu">
           <slot />
@@ -329,13 +329,17 @@ import { DarkMode } from "accessible-astro-components";
     .mobile-menu {
       flex-basis: 100%;
       padding: 2rem 0;
+      background-color: #212a2e88;
+      margin-bottom: 60px;
 
       > ul {
         flex-direction: column;
+        gap: 1rem;
 
         ul {
           position: relative;
           margin-top: 1rem;
+          align-items: center;
         }
       }
 
@@ -344,6 +348,7 @@ import { DarkMode } from "accessible-astro-components";
         display: block;
         width: 100%;
         padding: 0.5rem 0;
+        text-align: center;
       }
     }
 
