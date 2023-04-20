@@ -1,9 +1,9 @@
 {
-  "name": "accessible-astro-starter",
-  "description": "An Accessible Starter Theme for Astro including several accessiblity features and tools to help you build faster.",
+  "name": "atd2023",
+  "description": "Anacle Technology day 2023",
   "version": "2.0.1",
-  "author": "Mark Teekman",
-  "homepage": "https://accessible-astro.dev",
+  "author": "Tan Nguyen Le - Mark Teekman",
+  "homepage": "https://www.atd2023.com",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
