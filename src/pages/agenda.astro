@@ -1,7 +1,8 @@
 ---
 import AgendaLayout from "../layouts/AgendaLayout.astro";
-
+import { inject } from "@vercel/analytics";
 const { src = "/general-bg.webp" } = Astro.props;
+inject();
 ---
 
 <AgendaLayout title="Agenda">

@@ -1,13 +1,16 @@
 ---
 import DefaultLayout from "../layouts/DefaultLayout.astro";
+import { inject } from "@vercel/analytics";
 const { src = "/general-bg.webp" } = Astro.props;
 const { manImage = "/man.webp" } = Astro.props;
 const { mobileTitleImage = "/mobile-title.webp" } = Astro.props;
+
+inject();
 ---
 
 <DefaultLayout title="Home">
   <section
-    class="relative bottom-0 flex lg:h-full  w-full items-center justify-center md:items-end"
+    class="relative bottom-0 flex w-full items-center justify-center md:items-end lg:h-full"
   >
     <div class="container hidden lg:flex">
       <div
@@ -62,11 +65,11 @@ const { mobileTitleImage = "/mobile-title.webp" } = Astro.props;
     </div>
   </section>
   <section
-    class="second-background flex lg:hidden flex-col flex-wrap items-center justify-center relative bottom-0 block min-h-[100vh] w-full text-center"
+    class="second-background relative bottom-0 block flex min-h-[100vh] w-full flex-col flex-wrap items-center justify-center text-center lg:hidden"
   >
-    <ul class="flex flex-col gap-8 flex-wrap items-center justify-around">
+    <ul class="flex flex-col flex-wrap items-center justify-around gap-8">
       <li>
-        <h3 class="text-lg font-light uppercase mb-3">
+        <h3 class="mb-3 text-lg font-light uppercase">
           turing <br />
           X <br />
           <span class="font-bold">No-Code Computing</span>
@@ -80,21 +83,21 @@ const { mobileTitleImage = "/mobile-title.webp" } = Astro.props;
       </li>
 
       <li>
-        <h3 class="text-lg font-light uppercase mb-3">
+        <h3 class="mb-3 text-lg font-light uppercase">
           minsky <br />
           X <br />
           <span class="font-bold">Artificial Intelligence</span>
         </h3>
         <ul>
           <li>
-            Insights® by Simplicity <br/> Early Fault Prediction • • • <br /> Chiller, Pump,
-            Elevator
+            Insights® by Simplicity <br /> Early Fault Prediction • • • <br /> Chiller,
+            Pump, Elevator
           </li>
         </ul>
       </li>
 
       <li>
-        <h3 class="text-lg font-light uppercase mb-3">
+        <h3 class="mb-3 text-lg font-light uppercase">
           ashton <br />
           X <br />
           <span class="font-bold">Internet of things</span>
@@ -108,7 +111,7 @@ const { mobileTitleImage = "/mobile-title.webp" } = Astro.props;
       </li>
 
       <li>
-        <h3 class="text-lg font-light uppercase mb-3">
+        <h3 class="mb-3 text-lg font-light uppercase">
           Mcdowell <br />
           X <br />
           <span class="font-bold">Immersive UX</span>
