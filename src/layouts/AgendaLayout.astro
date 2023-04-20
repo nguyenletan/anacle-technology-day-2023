@@ -24,7 +24,7 @@ const {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
 
@@ -44,9 +44,12 @@ const {
     <Header />
     <main id="main-content">
       <slot />
-
     </main>
-    <img src="/agenda-footer.webp" class="absolute bottom-0 right-24 object-cover z-0" />
+    <!--<img src="/agenda-footer.webp" class="absolute bottom-0 right-8 object-cover z-0" />-->
+    <div class="absolute bottom-0 right-8 z-0 object-cover">
+      <p class="text-4xl font-thin">12 -13 JUL</p>
+      <p class="text-lg font-light">2 pm - 5 pm</p>
+    </div>
     <!--<Footer /> -->
     <style lang="scss" is:global>
       // theme settings
@@ -59,7 +62,7 @@ const {
         --font-family-special: "Montserrat", sans-serif;
         // light theme
         --font-color: var(--neutral-100);
-        --action-color: #E6E6E6;
+        --action-color: #e6e6e6;
         --action-color-state: #fff;
         --background: #212a2e;
         --primary-background: var(--primary-100);
@@ -116,19 +119,19 @@ const {
       }
 
       .agendaBackground {
-          background-image: url("/agenda-bg-2.webp");
-          background-size: contain;
-          background-position: left top;
-          background-repeat: no-repeat;
+        background-image: url("/agenda-bg-2.webp");
+        background-size: contain;
+        background-position: left top;
+        background-repeat: no-repeat;
       }
 
       @media only screen and (min-width: 480px) {
-          .agendaBackground {
-              background-image: url("/agenda-bg-2.webp");
-              background-size: cover;
-              background-position: right top;
-              background-repeat: no-repeat;
-          }
+        .agendaBackground {
+          background-image: url("/agenda-bg-2.webp");
+          background-size: cover;
+          background-position: right top;
+          background-repeat: no-repeat;
+        }
       }
     </style>
   </body>

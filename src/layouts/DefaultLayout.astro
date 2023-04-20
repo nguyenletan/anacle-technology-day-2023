@@ -24,7 +24,7 @@ const {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
 
@@ -33,9 +33,7 @@ const {
       description={description.substring(0, 100)}
       url={Astro.site
         ? `${Astro.site}/${title.toLowerCase().replaceAll(" ", "-")}`
-        : `https://www.atd2023.com/${title
-            .toLowerCase()
-            .replaceAll(" ", "-")}`}
+        : `https://www.atd2023.com/${title.toLowerCase().replaceAll(" ", "-")}`}
       image={image}
       author={author}
     />
@@ -57,7 +55,7 @@ const {
         --font-family-special: "Montserrat", sans-serif;
         // light theme
         --font-color: var(--neutral-100);
-        --action-color: #E6E6E6;
+        --action-color: #e6e6e6;
         --action-color-state: #fff;
         --background: #212a2e;
         --primary-background: var(--primary-100);
@@ -114,19 +112,19 @@ const {
       }
 
       .mainBackground {
-          background-image: url("/mobile-bg.webp");
-          background-size: cover;
-          background-position: center top;
-          background-repeat: no-repeat;
+        background-image: url("/mobile-bg.webp");
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
       }
 
       @media only screen and (min-width: 480px) {
-          .mainBackground {
-              background-image: url("/general-bg.webp");
-              background-size: cover;
-              background-position: right center;
-              background-repeat: no-repeat;
-          }
+        .mainBackground {
+          background-image: url("/general-bg.webp");
+          background-size: cover;
+          background-position: right center;
+          background-repeat: no-repeat;
+        }
       }
     </style>
   </body>
