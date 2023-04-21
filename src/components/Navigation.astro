@@ -15,8 +15,8 @@ import { DarkMode } from "accessible-astro-components";
       <!--span class="font-bold text-xl">Anacle Technology Day</span>-->
     </a>
 
-    <div class="wrapper lg:mr-24">
-      <div class="mr-2 mt-1 flex lg:hidden">
+    <div class="wrapper sm:mr-24">
+      <div class="mr-2 mt-1 flex sm:hidden">
         <a target="_blank" href="https://form.jotform.com/230920323318851"
           >REGISTER</a>
       </div>
@@ -55,11 +55,11 @@ import { DarkMode } from "accessible-astro-components";
       menuItems.forEach((menuItem) => {
         if (
           currenPathname.includes(menuItem.pathname.replaceAll("/", "")) &&
-          menuItem.textContent !== "Home"
+          menuItem.textContent !== "HOME"
         ) {
           menuItem.classList.add("is-active");
           menuItem.setAttribute("aria-current", "page");
-        } else if (menuItem.textContent === "Home" && currenPathname === "/") {
+        } else if (menuItem.textContent === "HOME" && currenPathname === "/") {
           menuItem.classList.add("is-active");
           menuItem.setAttribute("aria-current", "page");
         }
@@ -72,7 +72,7 @@ import { DarkMode } from "accessible-astro-components";
     const desktopMenuWidth = document
       .querySelector(".desktop-menu")
       .getBoundingClientRect().width;
-    const logoWidthBuffer = 300;
+    const logoWidthBuffer = 320;
     const totalMenuWidth = Math.round(desktopMenuWidth) + logoWidthBuffer;
 
     if (totalMenuWidth >= mainNavWidth) {
