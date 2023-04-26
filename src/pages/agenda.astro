@@ -1,20 +1,89 @@
 ---
 import AgendaLayout from "../layouts/AgendaLayout.astro";
 import { inject } from "@vercel/analytics";
-const { src = "/general-bg.webp" } = Astro.props;
+const { titleImage = "/breaking-boundaries-2023-agenda-title.webp" } =
+  Astro.props;
 inject();
 ---
 
 <AgendaLayout title="Agenda">
-  <section class="flex h-full w-full">
-    <div class="container">
-
+  <section class="background-text flex h-full w-full">
+    <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
+      <div class="flex flex-col items-center justify-center">
+        <img
+          src={titleImage}
+          alt="Breaking Boundaries 2023 Agenda"
+          class="w-full xl:mt-[-140px]"
+        />
+        <div
+          class="mb-12 flex w-2/4 min-w-[300px] justify-center gap-6 xl:gap-8"
+        >
+          <span class="text-xl font-semibold xl:text-2xl">12 - 13 JULY</span>
+          <span class="text-xl font-semibold xl:text-2xl">2 PM - 5 PM</span>
+        </div>
+        <div class="mb-8">
+          <p class="text-center text-xl font-extralight">MARINA BAY SANDS</p>
+          <p class="text-center text-xl font-extralight">
+            EXPO & CONVENTION CENTRE
+          </p>
+        </div>
+      </div>
+      <div
+        class="mb-8 mt-16 flex flex-col justify-center px-4 text-center lg:mt-0 lg:text-left xl:px-0"
+      >
+        <h2 class="mb-12 text-4xl font-bold uppercase xl:text-5xl">
+          <span class="font-light">redefining</span> proptech
+        </h2>
+        <ul class="flex flex-col gap-10 text-lg">
+          <li>
+            <h3 class="mb-2 text-lg">
+              <span class="pr-2">X</span> No-Code Computing
+            </h3>
+            <p class="text-base xl:ml-7">Blockly Code Assembler</p>
+          </li>
+          <li>
+            <h3 class="mb-2 text-lg">
+              <span class="pr-2">X</span> Artificial Intelligence
+            </h3>
+            <p class="text-base xl:ml-7">
+              Insights™ by Simplicity®: Business Intelligence Chatbot
+            </p>
+            <p class="text-base xl:ml-7">
+              Co-Pilot™ by Simplicity®: Virtual Assistant Chatbot
+            </p>
+          </li>
+          <li>
+            <h3 class="mb-2 text-lg">
+              <span class="pr-2">X</span> Immersive 3D User Experience & IoT
+            </h3>
+            <p class="text-base xl:ml-7">
+              Photogrammetric Immersive Surveillance
+            </p>
+            <p class="text-base xl:ml-7">
+              Bluetooth Low Energy (BLE) Real-time Asset Locating
+            </p>
+          </li>
+          <li>
+            <h3 class="mb-2 text-lg">
+              <span class="pr-2">X</span> Demonstration Exhibits
+            </h3>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
-</AgendaLayout>
 
-<style lang="scss" >
+  <style lang="scss">
     header {
-
     }
-</style>
+
+    .background-text {
+      color: var(--primary-200);
+    }
+
+    .event-list {
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+  </style>
+</AgendaLayout>
