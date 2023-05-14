@@ -1,11 +1,11 @@
 ---
 import DefaultLayout from "../layouts/DefaultLayout.astro";
-import { inject } from "@vercel/analytics";
+
 const { src = "/general-bg.webp" } = Astro.props;
 const { manImage = "/man.webp" } = Astro.props;
 const { mobileTitleImage = "/mobile-title.webp" } = Astro.props;
 
-inject();
+
 ---
 
 <DefaultLayout title="Home">
