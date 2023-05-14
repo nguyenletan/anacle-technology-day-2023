@@ -1,15 +1,11 @@
 ---
-import {inject} from "@vercel/analytics";
----
-import {inject} from "@vercel/analytics";
----
 import "../assets/scss/globals.scss";
 import SiteMeta from "../components/SiteMeta.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { inject } from "@vercel/analytics";
-inject();
 
+inject();
 const {
   title = "Anacle - Anacle Technical day 2023",
   description = "Anacle Technical day 2023",
